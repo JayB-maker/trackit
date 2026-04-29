@@ -104,8 +104,8 @@ Do not commit real `.env` files, virtual environments, `node_modules`, `.next`, 
    - For production data you care about, use a hosted PostgreSQL database and set `DATABASE_URL` to that URL, because free web services can lose local SQLite files.
 7. Deploy.
 
-### Bot (Render – free tier worker)
-1. Create a new **Background Worker**.
+### Bot (Render – free tier web service)
+1. Create a new **Web Service**.
 2. Root directory: `bot`
 3. Build command:
    ```bash
@@ -117,6 +117,8 @@ Do not commit real `.env` files, virtual environments, `node_modules`, `.next`, 
    ```
 5. Add env vars from `bot/.env`.
    - Set `BACKEND_URL` to the public Render backend URL, for example `https://your-backend.onrender.com`.
+   - Keep `BOT_TOKEN` secret.
+6. Deploy. The bot web service exposes `/health` for Render while Telegram polling runs in the same process.
 
 ### Web App (Vercel – free tier)
 1. Import GitHub repo in Vercel.
