@@ -3,7 +3,7 @@ import Link from "next/link";
 const featureItems = [
   { icon: "✦", title: "Telegram-first logging", desc: "Send a message, get it saved. No app switching." },
   { icon: "◈", title: "Low-data tracking",      desc: "Simple requests keep logging light when connectivity is limited." },
-  { icon: "◎", title: "Budgets & alerts",        desc: "Set limits by category, get nudged before overspending." },
+  { icon: "◎", title: "Budget tracking",         desc: "Set limits by category and review them as your spending grows." },
   { icon: "⊞", title: "CSV export",              desc: "Pull your data anytime for deeper analysis." },
   { icon: "₦", title: "Naira insights",          desc: "Charts and summaries built for Nigerian spending patterns." },
   { icon: "↻", title: "Recurring expenses",      desc: "Handle rent, subscriptions, and bills automatically." },

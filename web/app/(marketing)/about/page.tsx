@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const whatYouGet = [
   "Telegram-first logging with instant confirmations",
-  "Budgets that alert you before overspending",
+  "Budgets for tracking category spending limits",
   "Web analytics for weekly and monthly reviews",
   "CSV exports whenever you need your records",
 ];

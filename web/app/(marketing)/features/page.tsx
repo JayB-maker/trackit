@@ -3,7 +3,7 @@ import Link from "next/link";
 const items = [
   { icon: "⚡", title: "Quick add",           detail: "Log expenses in seconds via Telegram or the web app. No friction, just data." },
   { icon: "◈", title: "Low-data tracking",    detail: "Fast Telegram and web requests keep logging light when connectivity is limited." },
-  { icon: "◎", title: "Budget nudges",        detail: "Track limits and stay ahead of overspending with timely alerts." },
+  { icon: "◎", title: "Budget tracking",      detail: "Set category limits and review them from Telegram or the web dashboard." },
   { icon: "↻", title: "Recurring expenses",   detail: "Handle repeat bills like rent or subscriptions automatically." },
   { icon: "⊞", title: "CSV export",           detail: "Export to CSV whenever you need deeper analysis outside the app." },
   { icon: "₦", title: "Naira analytics",      detail: "Charts and summaries tailored specifically for Nigerian spending." },
