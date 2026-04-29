@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 from datetime import date, timedelta
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from io import BytesIO
+from urllib.parse import urlparse
 from telegram import Update, ReplyKeyboardMarkup, ReplyKeyboardRemove, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, CallbackQueryHandler, filters
 
@@ -59,7 +60,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         ]
     )
     await update.message.reply_text(
-        "Welcome to TrackIt NG. Your offline-first finance tracker.\n\nCommands:\n"
+        "Welcome to TrackIt NG. Your low-data finance tracker.\n\nCommands:\n"
         + COMMANDS_TEXT,
         reply_markup=keyboard,
     )
@@ -407,7 +408,6 @@ def start_health_server():
 def main():
     if not BOT_TOKEN:
         raise RuntimeError("BOT_TOKEN not set")
-    start_health_server()
     app = ApplicationBuilder().token(BOT_TOKEN).build()
 
     app.add_handler(CommandHandler("start", start))
@@ -428,7 +428,23 @@ def main():
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text))
     app.add_handler(MessageHandler(filters.COMMAND, unknown))
 
-    app.run_polling()
+    webhook_url = os.getenv("BOT_WEBHOOK_URL", "").strip()
+    if webhook_url:
+        parsed_url = urlparse(webhook_url)
+        url_path = parsed_url.path.strip("/") or "webhook"
+        port = int(os.getenv("PORT", "10000"))
+        logger.info("Starting bot in webhook mode at %s", webhook_url)
+        app.run_webhook(
+            listen="0.0.0.0",
+            port=port,
+            url_path=url_path,
+            webhook_url=webhook_url,
+            drop_pending_updates=True,
+        )
+    else:
+        start_health_server()
+        logger.info("Starting bot in polling mode")
+        app.run_polling(drop_pending_updates=True)
 
 
 if __name__ == "__main__":

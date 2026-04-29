@@ -1,6 +1,6 @@
 # TrackIt NG
 
-Offline-first personal finance tracker for Nigerian users. Primary interface is a Telegram bot, with a web dashboard and a marketing site.
+Low-data personal finance tracker for Nigerian users. Primary interface is a Telegram bot, with a web dashboard and a marketing site.
 
 ## Monorepo Structure
 
@@ -118,7 +118,8 @@ Do not commit real `.env` files, virtual environments, `node_modules`, `.next`, 
 5. Add env vars from `bot/.env`.
    - Set `BACKEND_URL` to the public Render backend URL, for example `https://your-backend.onrender.com`.
    - Keep `BOT_TOKEN` secret.
-6. Deploy. The bot web service exposes `/health` for Render while Telegram polling runs in the same process.
+   - Set `BOT_WEBHOOK_URL` to the public bot service webhook URL, for example `https://your-bot-service.onrender.com/webhook`.
+6. Deploy. With `BOT_WEBHOOK_URL` set, Telegram sends updates to the web service directly, which works better on free web services that may sleep.
 
 ### Web App (Vercel – free tier)
 1. Import GitHub repo in Vercel.

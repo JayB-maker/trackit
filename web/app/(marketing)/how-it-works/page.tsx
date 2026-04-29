@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const steps = [
-  { title: "Connect Telegram", detail: "Start the bot and get an offline-ready wallet in seconds. No sign-up form, no friction." },
+  { title: "Connect Telegram", detail: "Start the bot and get a lightweight wallet in seconds. No sign-up form, no friction." },
   { title: "Log expenses",     detail: 'Send quick messages like "2000 transport" and TrackIt records it instantly.' },
   { title: "Review insights",  detail: "Open the web app for charts, trends, budget progress, and deeper analytics." },
 ];

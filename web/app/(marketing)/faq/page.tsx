@@ -1,6 +1,6 @@
 const faqs = [
-  { q: "Does TrackIt need internet?",       a: "It works offline-first and stores data locally. Internet is only needed when syncing Telegram messages." },
-  { q: "Is my data safe?",                  a: "Yes. Data is stored in SQLite locally and protected by simple auth on the web app. We don't sell your data." },
+  { q: "Does TrackIt need internet?",       a: "Yes. The Telegram bot and deployed web dashboard need internet because they talk to the hosted backend. The app is designed to be lightweight and low-data, not fully offline yet." },
+  { q: "Is my data safe?",                  a: "Data is stored in the backend database and protected by simple auth on the web app. We don't sell your data." },
   { q: "Can I export my data?",             a: "Absolutely. Use the CSV export from Telegram or the web app at any time." },
   { q: "What currencies are supported?",    a: "TrackIt is built specifically for Naira (₦). All analytics and summaries are formatted for Nigerian spending." },
   { q: "How do I set a budget?",            a: "Send /budget 25000 groceries in Telegram or use the budget panel in the web dashboard." },

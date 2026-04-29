@@ -20,7 +20,7 @@ export default function GetStartedPage() {
           <p className="text-sm leading-relaxed text-muted mb-7">
             Use the bot for fast logging. Type /start and you're ready in seconds.
           </p>
-          <Link href="https://t.me/trackit_ng_bot" className="t-btn-primary">
+          <Link href="https://t.me/thetracking_bot" className="t-btn-primary">
             Open Telegram Bot →
           </Link>
         </div>

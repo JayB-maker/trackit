@@ -4,7 +4,7 @@ const whatYouGet = [
   "Telegram-first logging with instant confirmations",
   "Budgets that alert you before overspending",
   "Web analytics for weekly and monthly reviews",
-  "Offline-ready storage with CSV exports",
+  "CSV exports whenever you need your records",
 ];
 
 export default function AboutPage() {
@@ -18,7 +18,7 @@ export default function AboutPage() {
           <em className="italic text-gold">spending habits.</em>
         </h1>
         <p className="text-base leading-[1.7] text-muted">
-          TrackIt is a Nigerian-first personal finance tool built around speed, clarity, and offline-first access.
+          TrackIt is a Nigerian-first personal finance tool built around speed, clarity, and low-data access.
         </p>
       </div>
 
@@ -46,7 +46,7 @@ export default function AboutPage() {
         {/* Mission banner */}
         <div className="md:col-span-2 bg-gold-bg border border-border-gold rounded-[20px] p-10 flex flex-wrap items-center justify-between gap-6">
           <p className="font-display text-[clamp(20px,2.5vw,28px)] italic leading-snug text-text max-w-[480px]">
-            "Finance tools should work for the way Nigerians actually live — on the go, on mobile, and offline."
+            "Finance tools should work for the way Nigerians actually live — on the go, on mobile, and with limited data."
           </p>
           <Link href="/get-started" className="t-btn-primary">Start tracking →</Link>
         </div>

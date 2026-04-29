@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const featureItems = [
   { icon: "✦", title: "Telegram-first logging", desc: "Send a message, get it saved. No app switching." },
-  { icon: "◈", title: "Offline-first storage",  desc: "Local SQLite keeps your data fast and private." },
+  { icon: "◈", title: "Low-data tracking",      desc: "Simple requests keep logging light when connectivity is limited." },
   { icon: "◎", title: "Budgets & alerts",        desc: "Set limits by category, get nudged before overspending." },
   { icon: "⊞", title: "CSV export",              desc: "Pull your data anytime for deeper analysis." },
   { icon: "₦", title: "Naira insights",          desc: "Charts and summaries built for Nigerian spending patterns." },
@@ -44,7 +44,7 @@ export default function HomePage() {
             Fast, lightweight, and built for low data usage.
           </p>
           <div className="flex flex-wrap gap-3 mb-12">
-            <Link href="https://t.me/trackit_ng_bot" className="t-btn-primary">Use on Telegram →</Link>
+            <Link href="https://t.me/thetracking_bot" className="t-btn-primary">Use on Telegram →</Link>
             <Link href="/login" className="t-btn-ghost">Open Web App</Link>
           </div>
           <div className="grid grid-cols-2 gap-4 max-w-[380px]">
@@ -64,7 +64,7 @@ export default function HomePage() {
             <p className="text-xs font-semibold tracking-[0.08em] text-muted">Live snapshot</p>
             <span className="flex items-center gap-1.5 px-3 py-1 rounded-btn bg-gold-bg text-[11px] font-semibold text-gold">
               <span className="w-1.5 h-1.5 rounded-full bg-gold inline-block" />
-              Offline-ready
+              Low-data
             </span>
           </div>
           <div className="flex flex-col gap-2.5">
@@ -220,7 +220,7 @@ export default function HomePage() {
             <h3 className="t-display text-[clamp(26px,3vw,36px)]">Track your spending today.</h3>
           </div>
           <div className="flex flex-wrap gap-3">
-            <Link href="https://t.me/trackit_ng_bot" className="t-btn-primary">Use on Telegram →</Link>
+            <Link href="https://t.me/thetracking_bot" className="t-btn-primary">Use on Telegram →</Link>
             <Link href="/login" className="t-btn-ghost">Open Web App</Link>
           </div>
         </div>

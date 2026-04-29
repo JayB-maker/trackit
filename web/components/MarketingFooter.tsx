@@ -43,7 +43,7 @@ export default function MarketingFooter() {
               <p className="font-display text-lg font-semibold text-text m-0">TrackIt NG</p>
             </div>
             <p className="text-[13px] leading-relaxed text-muted m-0">
-              Nigerian-first personal finance. Fast logging, smart insights, offline-ready.
+              Nigerian-first personal finance. Fast logging, smart insights, low-data.
             </p>
           </div>
 

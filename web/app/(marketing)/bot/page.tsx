@@ -4,7 +4,7 @@ const commands = [
   { cmd: "/start",                   desc: "Activate your wallet." },
   { cmd: "2000 transport",           desc: "Log a spend with amount + category." },
   { cmd: "/budget 25000 groceries",  desc: "Set a category spending limit." },
-  { cmd: "/summary week",            desc: "Get a quick weekly insight." },
+  { cmd: "/week",                    desc: "Get a quick weekly insight." },
 ];
 
 export default function BotPage() {
