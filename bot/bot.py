@@ -8,9 +8,14 @@ from io import BytesIO
 from telegram import Update, ReplyKeyboardMarkup, ReplyKeyboardRemove, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, CallbackQueryHandler, filters
 
-from .config import BOT_TOKEN
-from . import client
-from .parsing import parse_quick
+try:
+    from .config import BOT_TOKEN
+    from . import client
+    from .parsing import parse_quick
+except ImportError:
+    from config import BOT_TOKEN
+    import client
+    from parsing import parse_quick
 
 load_dotenv()
 logging.basicConfig(level=logging.INFO)

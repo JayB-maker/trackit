@@ -1,5 +1,9 @@
 import httpx
-from .config import BACKEND_URL
+
+try:
+    from .config import BACKEND_URL
+except ImportError:
+    from config import BACKEND_URL
 
 
 def _url(path: str) -> str:
